@@ -114,8 +114,8 @@ public:
 
         vSeeds.push_back(CDNSSeedData("Seednode1", "impleum.com"));
         vSeeds.push_back(CDNSSeedData("Seednode2", "explorer.impleum.com"));
-//        vSeeds.push_back(CDNSSeedData("Seednode3", "seednode3.stratisplatform.com"));
-//        vSeeds.push_back(CDNSSeedData("Seednode4", "seednode4.stratis.cloud"));
+        vSeeds.push_back(CDNSSeedData("Seednode3", "109.108.77.134"));
+        vSeeds.push_back(CDNSSeedData("Seednode4", "62.80.181.141"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 102);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 125);

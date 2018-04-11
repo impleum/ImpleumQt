@@ -1275,10 +1275,7 @@ void ThreadOpenAddedConnections()
                 LOCK(cs_vAddedNodes);
                 BOOST_FOREACH(string& strAddNode, vAddedNodes)
                     lAddresses.push_back(strAddNode);
-            }
-            lAddresses.push_back("109.108.77.134");
-            lAddresses.push_back("62.80.181.141");
-            lAddresses.push_back("82.144.207.72");
+            }           
             BOOST_FOREACH(string& strAddNode, lAddresses) {
                 CAddress addr;
                 CSemaphoreGrant grant(*semOutbound);
