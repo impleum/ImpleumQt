@@ -23,20 +23,20 @@ sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
 
 cd /usr/local
-file=/usr/local/impleumX
+file=/usr/local/impleumQT
 if [ ! -e "$file" ]
 then
-        sudo git clone https://github.com/impleumproject/impleumX.git
+        sudo git clone https://github.com/impleum/ImpleumQt.git
 fi
 
-cd /usr/local/impleumX/src
-file=/usr/local/impleumX/src/impleumd
+cd /usr/local/impleumQT/src
+file=/usr/local/impleumQT/src/impleumd
 if [ ! -e "$file" ]
 then
         sudo make -j$NPROC -f makefile.unix
 fi
 
-sudo cp /usr/local/impleumX/src/impleumd /usr/bin/impleumd
+sudo cp /usr/local/impleumQT/src/impleumd /usr/bin/impleumd
 
 ################################################################
 # Configure to auto start at boot                                      #
