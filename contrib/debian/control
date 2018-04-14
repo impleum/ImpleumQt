@@ -1,4 +1,4 @@
-Source: stratis
+Source: impleum
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -19,11 +19,11 @@ Build-Depends: debhelper,
  libqt4-dev,
  libqrencode-dev
 Standards-Version: 3.9.2
-Homepage: http://www.stratis.co/
-Vcs-Git: git://github.com/rat4/stratis.git
-Vcs-Browser: http://github.com/rat4/stratis
+Homepage: https://impleum.com/
+Vcs-Git: https://github.com/impleum/ImpleumQt.git
+Vcs-Browser: https://github.com/impleum/ImpleumQt
 
-Package: stratisd
+Package: impleumd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
@@ -38,10 +38,10 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides stratisd, a combined daemon and CLI tool to
+ This package provides impleumd, a combined daemon and CLI tool to
  interact with the daemon.
 
-Package: stratis-qt
+Package: impleum-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
@@ -56,4 +56,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 2+ GB of space, slowly growing.
  .
- This package provides Stratis-Qt, a GUI for Stratis based on Qt.
+ This package provides Smpleum-Qt, a GUI for Impleum based on Qt.
