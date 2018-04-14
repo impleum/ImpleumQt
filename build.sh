@@ -29,14 +29,14 @@ then
         sudo git clone https://github.com/impleum/ImpleumQt.git
 fi
 
-cd /usr/local/impleumQT/src
-file=/usr/local/impleumQT/src/impleumd
+cd /usr/local/ImpleumQt/src
+file=/usr/local/ImpleumQt/src/impleumd
 if [ ! -e "$file" ]
 then
         sudo make -j$NPROC -f makefile.unix
 fi
 
-sudo cp /usr/local/impleumQT/src/impleumd /usr/bin/impleumd
+sudo cp /usr/local/ImpleumQt/src/impleumd /usr/bin/impleumd
 
 ################################################################
 # Configure to auto start at boot                                      #
