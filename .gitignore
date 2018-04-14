@@ -1,7 +1,7 @@
 src/*.exe
-src/stratis
-src/stratisd
-src/test_stratis
+src/impleum
+src/impleumd
+src/test_impleum
 src/build.h
 .*.swp
 *.*~*
