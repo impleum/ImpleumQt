@@ -1,4 +1,4 @@
-stratis-qt usr/bin
+impleum-qt usr/bin
 share/pixmaps/bitcoin32.xpm usr/share/pixmaps
 share/pixmaps/bitcoin80.xpm usr/share/pixmaps
 debian/stratis-qt.desktop usr/share/applications
