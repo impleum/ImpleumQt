@@ -10,11 +10,11 @@ src/build.h
 *.orig
 *.o
 *.patch
-.stratis
+.impleum
 #compilation and Qt preprocessor part
 *.qm
 Makefile
-stratis-qt
+impleum-qt
 #resources cpp
 qrc_*.cpp
 #qt creator
