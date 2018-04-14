@@ -11,4 +11,4 @@ cfgfile="$basedir/impleum.conf"
 
 [ -e "$cfgfile" ] || perl -le 'print"rpcpassword=",map{(a..z,A..Z,0..9)[rand 62]}0..9' > "$cfgfile"
 
-exec /usr/lib/stratis/impleumd "$@"
+exec /usr/lib/impleum/impleumd "$@"
