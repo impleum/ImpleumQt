@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Stratis
+Name=Impleum
 Comment=Impleum P2P Cryptocurrency
 Exec=/usr/bin/impleum-qt
 Terminal=false
 Type=Application
 Icon=/usr/share/pixmaps/bitcoin80.xpm
-MimeType=x-scheme-handler/stratis;
+MimeType=x-scheme-handler/impleum;
 Categories=Office;
 Name[en_US]=impleum-qt.desktop
