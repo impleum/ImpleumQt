@@ -1,19 +1,19 @@
-.TH STRATIS.CONF "8" "Juli 2014" "stratis.conf 3.19"
+.TH IMPLEUM.CONF "8" "Juli 2014" "impleum.conf 3.19"
 .SH NAME
-stratis.conf \- stratis configuration file
+impleum.conf \- impleum configuration file
 .SH SYNOPSIS
 All command-line options (except for '-datadir' and '-conf') may be specified in a configuration file, and all configuration file options may also be specified on the command line. Command-line options override values set in the configuration file.
 .TP
 The configuration file is a list of 'setting=value' pairs, one per line, with optional comments starting with the '#' character.
 .TP
-The configuration file is not automatically created; you can create it using your favorite plain-text editor. By default, stratisd(1) will look for a file named stratis.conf(5) in the stratis data directory, but both the data directory and the configuration file path may be changed using the '-datadir' and '-conf' command-line arguments.
+The configuration file is not automatically created; you can create it using your favorite plain-text editor. By default, impleumd(1) will look for a file named stratis.conf(5) in the stratis data directory, but both the data directory and the configuration file path may be changed using the '-datadir' and '-conf' command-line arguments.
 .SH LOCATION
-stratis.conf should be located in $HOME/.stratis
+impleum.conf should be located in $HOME/.impleum
 .SH NETWORK-RELATED SETTINGS
 .TP
 .TP
 \fBtestnet=\fR[\fI'1'\fR|\fI'0'\fR]
-Enable or disable run on the test network instead of the real *stratis* network.
+Enable or disable run on the test network instead of the real *impleum* network.
 .TP
 \fBproxy=\fR\fI'127.0.0.1:9050'\fR
 Connect via a socks4 proxy.
@@ -25,14 +25,14 @@ Use as many *addnode=* settings as you like to connect to specific peers.
 Use as many *connect=* settings as you like to connect ONLY to specific peers.
 .TP
 \fBnoirc=\fR[\fI'1'\fR|\fI'0'\fR]
-Use or Do not use Internet Relay Chat (irc.lfnet.org #stratis channel) to find other peers.
+Use or Do not use Internet Relay Chat (irc.lfnet.org #impleum channel) to find other peers.
 .TP
 \fRmaxconnections=\fR\fI'value'\fR
 Maximum number of inbound+outbound connections.
 .SH JSON-RPC OPTIONS
 .TP
 \fBserver=\fR[\fI'1'\fR|\fI'0'\fR]
-Tells *stratis* to accept or not accept JSON-RPC commands.
+Tells *impleum* to accept or not accept JSON-RPC commands.
 .TP
 \fBrpcuser=\fR\fI'username'\fR
 You must set *rpcuser* to secure the JSON-RPC api.
@@ -41,7 +41,7 @@ You must set *rpcuser* to secure the JSON-RPC api.
 You must set *rpcpassword* to secure the JSON-RPC api.
 .TP
 \fBrpctimeout=\fR\fI'30'\fR
-How many seconds *stratis* will wait for a complete RPC HTTP request, after the HTTP connection is established.
+How many seconds *impleum* will wait for a complete RPC HTTP request, after the HTTP connection is established.
 .TP
 \fBrpcallowip=\fR\fI'192.168.1.*'\fR
 By default, only RPC connections from localhost are allowed. Specify as many *rpcallowip=* settings as you like to allow connections from other hosts (and you may use * as a wildcard character).
