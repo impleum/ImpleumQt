@@ -170,7 +170,8 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        //vSeeds.push_back(CDNSSeedData("192.168.0.111", "192.168.0.111"));
+        vSeeds.push_back(CDNSSeedData("62.80.181.141", "62.80.181.141"));
+        vSeeds.push_back(CDNSSeedData("109.108.77.134", "109.108.77.134"));
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 102); // stratis test net start with T
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 65 + 128);
