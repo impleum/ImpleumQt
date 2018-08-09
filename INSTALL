@@ -1,0 +1,9 @@
+Building impleum
+
+See doc/readme-qt.rst for instructions on building Impleum QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of impleum.
+
+See doc/build-*.txt for instructions on building impleumd,
+the intended-for-services, no-graphical-interface, reference
+implementation of impleum.
