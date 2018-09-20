@@ -40,9 +40,7 @@ namespace Checkpoints
         ( 200000,  uint256("a8c3901f1752cea4defdea41ee94221eb9b43c8836b995eb1bb873538b7d18b4") )
         ( 215001,  uint256("04c2b9fe7e52e0c6d54fbdf5018fcda8709457b1c12b0dc8eae185b2018de19a") )
         ( 250000,  uint256("36bca99e22d680d6bb4b2dd7b844e1a939925d5bebe320f1d9f5c7c8adb87882") );
-
-    ;*/
-
+ 
     // TestNet has no checkpoints
     static MapCheckpoints mapCheckpointsTestnet;
 
