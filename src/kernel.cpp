@@ -480,7 +480,7 @@ bool CheckKernel(CBlockIndex* pindexPrev, unsigned int nBits, int64_t nTime, con
     if (IsProtocolV3(nTime))
     {
         int nDepth;
-        if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nDepth))
+        if (IsConfirmedInNPrevBlocks(txindex, pindexPrev,  GetStakeMinConfirmations(pindexPrev->nHeight + 1) - 1, nDepth))
             return false;
     }
     else
