@@ -42,7 +42,6 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 48);
 
-int nStakeMinConfirmations = 50;
 unsigned int nStakeMinAge = 8 * 60 * 60; // 8 hours
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
@@ -1983,7 +1982,7 @@ bool CTransaction::GetCoinAge(CTxDB& txdb, const CBlockIndex* pindexPrev, uint64
         if (IsProtocolV3(nTime))
         {
             int nSpendDepth;
-            if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, nStakeMinConfirmations - 1, nSpendDepth))
+            if (IsConfirmedInNPrevBlocks(txindex, pindexPrev, GetStakeMinConfirmations(pindexPrev->nHeight + 1) - 1, nSpendDepth))
             {
                 LogPrint("coinage", "coin age skip nSpendDepth=%d\n", nSpendDepth + 1);
                 continue; // only count coins meeting min confirmations requirement
@@ -2607,8 +2606,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
     if (TestNet())
     {
-        nStakeMinConfirmations = 2;
-        nCoinbaseMaturity = 2; // test maturity is 10 blocks
+        nCoinbaseMaturity = 10; // test maturity is 10 blocks
     }
 
     //
