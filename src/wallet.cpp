@@ -1135,7 +1135,7 @@ void CWallet::AvailableCoinsForStaking(vector<COutput>& vCoins, unsigned int nSp
 
             if (IsProtocolV3(nSpendTime))
             {
-                if (nDepth < nStakeMinConfirmations)
+                if (nDepth < GetStakeMinConfirmations(nBestHeight + 1))
                     continue;
             }
             else
@@ -1574,7 +1574,7 @@ uint64_t CWallet::GetStakeWeight() const
     {
         if (IsProtocolV3(nCurrentTime))
         {
-            if (pcoin.first->GetDepthInMainChain() >= nStakeMinConfirmations)
+            if (pcoin.first->GetDepthInMainChain() >= GetStakeMinConfirmations(nBestHeight + 1))
                 nWeight += pcoin.first->vout[pcoin.second].nValue;
         }
         else
@@ -1713,7 +1713,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             int64_t nTimeWeight = GetWeight((int64_t)pcoin.first->nTime, (int64_t)txNew.nTime);
 
             // Stop adding more inputs if already too many inputs
-            if (txNew.vin.size() >= 100)
+            if (txNew.vin.size() >= 10)
                 break;
             // Stop adding inputs if reached reserve limit
             if (nCredit + pcoin.first->vout[pcoin.second].nValue > nBalance - nReserveBalance)
