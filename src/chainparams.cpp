@@ -170,9 +170,9 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("62.80.181.141", "62.80.181.141"));
-        vSeeds.push_back(CDNSSeedData("109.108.77.134", "109.108.77.134"));
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 102); // stratis test net start with T
+        vSeeds.push_back(CDNSSeedData("Seednode1", "texplorer.impleum.com"));
+        vSeeds.push_back(CDNSSeedData("Seednode2", "faucet.impleum.com"));
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 102); // Impleum test net start with i
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 196);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1, 65 + 128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
